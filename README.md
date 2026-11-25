@@ -45,3 +45,17 @@ To create captions from your own voiceover, you can:
 
 ## Licensing note
 Remotion is free for individuals and companies with up to 3 employees. Larger organisations need a company licence; see https://remotion.dev/license.
+
+## GrowKaz Stickman Studio (2D/3D stick-figure videos)
+The GrowKaz Stickman plugin is installed in two places:
+- `.claude/skills/`: its skills (`make-2d-video`, `/new-video`, `/video-styles`, `/render-video`, `/video-sound`). Claude Code loads these automatically in this repo.
+- `growkaz-stickman-studio/`: the studio (renderer, engine, audio tools). Each video lives in `growkaz-stickman-studio/projects/<slug>/`.
+
+Setup on a new machine (from `growkaz-stickman-studio/`):
+```bash
+npm install
+npx playwright install chromium
+python3 -m pip install numpy scipy faster-whisper
+python3 tools/doctor.py
+```
+Local change: `render.mjs` uses the browser at `$CHROMIUM_PATH` when that file exists (set in `.claude/settings.json` for Claude Code cloud sessions, which can't download Playwright's browser). Otherwise it uses Playwright's own browser.
