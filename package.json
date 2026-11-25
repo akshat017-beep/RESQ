@@ -1,0 +1,30 @@
+{
+  "name": "resq-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "3D animated videos with three.js + Remotion (captions, audio, rendering)",
+  "scripts": {
+    "dev": "remotion studio",
+    "render": "remotion render Main out/video.mp4",
+    "still": "remotion still Main out/frame.png --frame=60",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "@remotion/captions": "4.0.547",
+    "@remotion/cli": "4.0.547",
+    "@remotion/media": "4.0.547",
+    "@remotion/media-utils": "4.0.547",
+    "@remotion/three": "4.0.547",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "4.0.547",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.1",
+    "@types/three": "^0.187.0",
+    "typescript": "^7.0.2"
+  }
+}
